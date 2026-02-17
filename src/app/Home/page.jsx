@@ -5,19 +5,22 @@ const Brandcarousal = lazy(() => import("./components/BrandCarousal"));
 const IntroOne = lazy(() => import("./components/IntroOne"));
 const IntroTwo = lazy(() => import("./components/IntroTwo"));
 const OurProcess = lazy(() => import("@/src/sections/OurProcess"));
-import { Search, PenTool, CheckCircle, Layout, Send } from "lucide-react"; // Lucide icons for a modern look
+const RecentProjects = lazy(() => import("@/src/components/RecentProjects"));
+const WritingServices = lazy(() => import("@/src/sections/WritingServices"));
+const ContactForm = lazy(() => import("@/src/sections/ContactForm"));
+import { Search, PenTool, CheckCircle, Layout, Send } from "lucide-react";
 
 const processes = [
   {
     title: "Research and Expert Outlining",
     description:
-      "With Ghost Writing Galaxy, you can trust that we will dedicate ourselves to conducting extensive research and crafting a carefully outlined draft.",
+      "With Ebilify, you can trust that we will dedicate ourselves to conducting extensive research and crafting a carefully outlined draft.",
     icon: <Search className="w-8 h-8" />,
   },
   {
     title: "Authentic Content Writing",
     description:
-      "Ghost Writing Galaxy takes immense pride in offering authentic content writing services with our team of experienced ghostwriters.",
+      "Ebilify takes immense pride in offering authentic content writing services with our team of experienced ghostwriters.",
     icon: <PenTool className="w-8 h-8" />,
   },
   {
@@ -40,21 +43,32 @@ const processes = [
   },
 ];
 const LoadingFallback = () => (
-  <div className="h-20 w-full flex items-center justify-center bg-white dark:bg-slate-950">
-    <div className="animate-pulse text-indigo-600 font-medium">Loading...</div>
+  <div className="h-24 w-full flex items-center justify-center bg-slate-50 dark:bg-slate-950">
+    <div className="flex items-center gap-3">
+      <div className="flex gap-1">
+        <span className="w-2 h-2 rounded-full bg-blue-400 dark:bg-blue-500 animate-bounce [animation-delay:0ms]" />
+        <span className="w-2 h-2 rounded-full bg-purple-400 dark:bg-purple-500 animate-bounce [animation-delay:150ms]" />
+        <span className="w-2 h-2 rounded-full bg-blue-400 dark:bg-blue-500 animate-bounce [animation-delay:300ms]" />
+      </div>
+      <span className="text-slate-400 dark:text-slate-500 text-sm font-medium tracking-wide">
+        Loading...
+      </span>
+    </div>
   </div>
 );
 
 const HomeScreen = () => {
   return (
     <>
-      {/* Suspense wrapper is required for lazy components */}
       <Suspense fallback={<LoadingFallback />}>
         <HomeHero />
         <Brandcarousal />
         <IntroOne />
         <IntroTwo />
         <OurProcess processes={processes} />
+        <RecentProjects />
+        <WritingServices />
+        <ContactForm />
       </Suspense>
     </>
   );
