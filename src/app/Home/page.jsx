@@ -63,12 +63,18 @@ const HomeScreen = () => {
       <Suspense fallback={<LoadingFallback />}>
         <HomeHero />
         <Brandcarousal />
-        <IntroOne />
-        <IntroTwo />
+        <section id="about-us">
+          <IntroOne />
+          <IntroTwo />
+        </section>
         <OurProcess processes={processes} />
         <RecentProjects />
-        <WritingServices />
-        <ContactForm />
+        <section id="services">
+          <WritingServices />
+        </section>
+        <section id="contact-us">
+          <ContactForm />
+        </section>
       </Suspense>
     </>
   );

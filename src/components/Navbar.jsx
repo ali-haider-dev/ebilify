@@ -17,8 +17,8 @@ export function Navbar() {
 
   const navLinks = [
     { href: "#services", label: "Services" },
-    { href: "#about", label: "About" },
-    { href: "#contact", label: "Contact Us" },
+    { href: "#about-us", label: "About" },
+    { href: "#contact-us", label: "Contact Us" },
   ];
 
   const containerVariants = {
