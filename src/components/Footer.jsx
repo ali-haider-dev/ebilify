@@ -4,6 +4,15 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Mail, MapPin, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+
+const QuickLinks = [
+  { name: "About Us", path: "#about-us", isExternal: false },
+  { name: "FAQs", path: "#faqs", isExternal: false },
+  { name: "Contact Us", path: "#contact-us", isExternal: false },
+  { name: "Privacy Policy", path: "/privacy-policy", isExternal: true },
+  { name: "Terms & Conditions", path: "/terms-conditions", isExternal: true },
+];
 
 const Footer = () => {
   return (
@@ -33,14 +42,6 @@ const Footer = () => {
                 loading="lazy"
                 className="h-10 opacity-80"
               />
-              <Image
-                src="/verified-seal.png"
-                alt="Verified"
-                width={100}
-                height={100}
-                loading="lazy"
-                className="h-10 opacity-80"
-              />
             </div>
           </div>
 
@@ -50,21 +51,15 @@ const Footer = () => {
               Quick Links
             </h4>
             <ul className="space-y-4">
-              {[
-                "About Us",
-                "FAQs",
-                "Privacy Policy",
-                "Terms & Conditions",
-                "Contact Us",
-              ].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase().replace(" ", "-")}`}
+              {QuickLinks.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.path}
                     className="text-white hover:text-indigo-400 transition-colors flex items-center gap-2 group text-sm"
                   >
                     <ChevronRight className="w-4 h-4 text-indigo-600 group-hover:translate-x-1 transition-transform" />
-                    {item}
-                  </a>
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -111,7 +106,7 @@ const Footer = () => {
                   <p className="text-xs text-white uppercase font-bold tracking-wider">
                     Call Us
                   </p>
-                  <p className="text-white">+1 (346) 299-8632</p>
+                  <p className="text-white">+1 (307) 269-9430</p>
                 </div>
               </li>
               <li className="flex items-start gap-4 group">
@@ -147,8 +142,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-800 text-center">
           <p className="text-white text-sm">
-            © {new Date().getFullYear()} Ghost Writing Galaxy. All rights
-            reserved.
+            © {new Date().getFullYear()} Ebilify LLC. All rights reserved.
           </p>
         </div>
       </div>

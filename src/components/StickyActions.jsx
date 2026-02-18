@@ -22,7 +22,7 @@ const StickyActions = () => {
   return (
     <>
       <motion.a
-        href="https://wa.me/yournumber"
+        href="https://wa.me/+15054413023"
         target="_blank"
         rel="noopener noreferrer"
         initial={{ scale: 0, opacity: 0 }}
