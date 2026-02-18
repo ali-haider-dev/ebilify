@@ -55,9 +55,9 @@ const introTwo = () => {
             top-notch ghostwriting and related services from a single, unmatched
             source. Say goodbye to the daunting task of starting your writing
             project and embrace the opportunity to unwind while receiving the
-            finest assistance. At Ghostswriting.com, we offer unparalleled
-            quality and a comprehensive range of services to meet all your
-            writing needs effortlessly.
+            finest assistance. At Ebilify.com, we offer unparalleled quality and
+            a comprehensive range of services to meet all your writing needs
+            effortlessly.
           </motion.p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start mb-16 pt-5">

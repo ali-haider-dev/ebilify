@@ -117,7 +117,7 @@ const Footer = () => {
                   <p className="text-xs text-white uppercase font-bold tracking-wider">
                     Email
                   </p>
-                  <p className="text-white">info@ebilify.co</p>
+                  <p className="text-white">info@ebilify.com</p>
                 </div>
               </li>
               <li className="flex items-start gap-4 group">

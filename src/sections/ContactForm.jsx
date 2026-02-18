@@ -35,7 +35,6 @@ const ContactForm = () => {
               </label>
               <input
                 type="text"
-                placeholder="John"
                 className="w-full px-5 py-3 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:border-indigo-600 dark:focus:border-indigo-400 outline-none transition-all dark:text-white"
               />
             </div>
@@ -45,7 +44,6 @@ const ContactForm = () => {
               </label>
               <input
                 type="text"
-                placeholder="Doe"
                 className="w-full px-5 py-3 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:border-indigo-600 dark:focus:border-indigo-400 outline-none transition-all dark:text-white"
               />
             </div>
@@ -58,7 +56,6 @@ const ContactForm = () => {
               </label>
               <input
                 type="tel"
-                placeholder="+1 (555) 000-0000"
                 className="w-full px-5 py-3 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:border-indigo-600 dark:focus:border-indigo-400 outline-none transition-all dark:text-white"
               />
             </div>
@@ -68,7 +65,6 @@ const ContactForm = () => {
               </label>
               <input
                 type="email"
-                placeholder="john@example.com"
                 className="w-full px-5 py-3 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:border-indigo-600 dark:focus:border-indigo-400 outline-none transition-all dark:text-white"
               />
             </div>
@@ -80,7 +76,6 @@ const ContactForm = () => {
             </label>
             <input
               type="text"
-              placeholder="How can we help you?"
               className="w-full px-5 py-3 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:border-indigo-600 dark:focus:border-indigo-400 outline-none transition-all dark:text-white"
             />
           </div>

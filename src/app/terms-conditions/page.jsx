@@ -28,26 +28,26 @@ const TermsAndConditions = () => {
               <div className="space-y-4">
                 <p>
                   <strong>&quot;Website&quot;</strong> means all online content
-                  on ghostbookwriters.org website pages.
+                  on ebilify.com website pages.
                 </p>
                 <p>
                   <strong>
                     &quot;Customer,&quot; &quot;You,&quot; &quot;Yours&quot;
                   </strong>{" "}
                   refers to you and/or any other person submitting an order to
-                  ghostbookwriters.org on your behalf.
+                  ebilify.com on your behalf.
                 </p>
                 <p>
                   <strong>
                     &quot;Company,&quot; &quot;We,&quot; &quot;Our&quot;
                   </strong>{" "}
-                  refers to ghostbookwriters.org, a company registered under the
-                  laws of the State.
+                  refers to ebilify.com, a company registered under the laws of
+                  the State.
                 </p>
                 <p>
                   <strong>&quot;Product or Services&quot;</strong> means all
-                  services and products provided by ghostbookwriters.org to
-                  customer in accordance with his/her order.
+                  services and products provided by ebilify.com to customer in
+                  accordance with his/her order.
                 </p>
               </div>
             </article>
@@ -72,9 +72,9 @@ const TermsAndConditions = () => {
               <p>
                 It is important that you carefully read and understand the
                 refund policy in order to have full knowledge of the privileges
-                and limitations governed by the Ghost Writing Galaxy Policy. It
-                is your obligation to read these Terms and Conditions before
-                submitting any Order and/or payment to this Website.
+                and limitations governed by theEbilify Policy. It is your
+                obligation to read these Terms and Conditions before submitting
+                any Order and/or payment to this Website.
               </p>
             </article>
 
