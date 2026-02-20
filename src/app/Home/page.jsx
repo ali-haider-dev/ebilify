@@ -9,6 +9,7 @@ const RecentProjects = lazy(() => import("@/src/components/RecentProjects"));
 const WritingServices = lazy(() => import("@/src/sections/WritingServices"));
 const ContactForm = lazy(() => import("@/src/sections/ContactForm"));
 import { Search, PenTool, CheckCircle, Layout, Send } from "lucide-react";
+import PricingSection from "@/src/components/PriceSection";
 
 const processes = [
   {
@@ -71,6 +72,9 @@ const HomeScreen = () => {
         <RecentProjects />
         <section id="services">
           <WritingServices />
+        </section>
+        <section>
+          <PricingSection />
         </section>
         <section id="contact-us">
           <ContactForm />

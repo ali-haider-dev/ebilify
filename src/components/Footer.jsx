@@ -7,9 +7,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const QuickLinks = [
-  { name: "About Us", path: "#about-us", isExternal: false },
-  { name: "FAQs", path: "#faqs", isExternal: false },
-  { name: "Contact Us", path: "#contact-us", isExternal: false },
+  { name: "About Us", path: "/#about-us", isExternal: false },
+  { name: "FAQs", path: "/#faqs", isExternal: false },
+  { name: "Contact Us", path: "/#contact-us", isExternal: false },
   { name: "Privacy Policy", path: "/privacy-policy", isExternal: true },
   { name: "Terms & Conditions", path: "/terms-conditions", isExternal: true },
 ];
