@@ -17,6 +17,7 @@ import {
   GraduationCap,
   Zap,
 } from "lucide-react";
+import Link from "next/link";
 
 const niches = [
   { title: "Travel & Lifestyle", icon: Plane, color: "#6366f1", bg: "#eef2ff" },
@@ -66,12 +67,7 @@ const niches = [
     color: "#d97706",
     bg: "#fef9c3",
   },
-  {
-    title: "Startups & Consultants",
-    icon: Zap,
-    color: "#6366f1",
-    bg: "#eef2ff",
-  },
+  
 ];
 
 // ─── Niche Card ───────────────────────────────────────────────────────────────
@@ -294,6 +290,7 @@ const WritingNiches = () => {
             />
 
             {/* Text color transition logic */}
+            <Link href={"/#contact-us"}>
             <span
               className="relative z-10 transition-colors duration-300 
       text-indigo-600 dark:text-white 
@@ -301,6 +298,7 @@ const WritingNiches = () => {
             >
               Let&apos;s Talk About Your Project
             </span>
+            </Link>
           </motion.button>
         </motion.div>
       </div>
