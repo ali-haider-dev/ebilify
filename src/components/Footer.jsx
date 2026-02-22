@@ -33,16 +33,16 @@ const Footer = () => {
               Literary Dreams! Embark on this remarkable journey with us and let
               us make your literary dreams a reality.
             </p>
-            {/* <div className="flex gap-4">
+            <div className="flex gap-4">
               <Image
-                src="/Logo.jpeg"
-                alt="ebilify"
-                width={200}
+                src="/dmca-protected.png"
+                alt="DMCA"
+                width={100}
                 height={100}
                 loading="lazy"
-                className="h-25 opacity-80"
+                className="h-10 opacity-80"
               />
-            </div> */}
+            </div>
           </div>
 
           {/* Quick Links */}
