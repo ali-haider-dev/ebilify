@@ -8,37 +8,46 @@ const OurProcess = lazy(() => import("@/src/sections/OurProcess"));
 const RecentProjects = lazy(() => import("@/src/components/RecentProjects"));
 const WritingServices = lazy(() => import("@/src/sections/WritingServices"));
 const ContactForm = lazy(() => import("@/src/sections/ContactForm"));
-import { Search, PenTool, CheckCircle, Layout, Send } from "lucide-react";
+import { Search, PenTool, CheckCircle, Layout, Send, RefreshCw } from "lucide-react";
 const PricingSection = lazy(() => import("@/src/components/PriceSection"));
+const RefundPolicy = lazy(() => import("@/src/components/RefundPolicy"));
+
+
 const processes = [
   {
-    title: "Research and Expert Outlining",
+    title: "Consultation & Project Scope Confirmation",
     description:
-      "With Ebilify, you can trust that we will dedicate ourselves to conducting extensive research and crafting a carefully outlined draft.",
+      "We begin with a deep dive into your vision. Our team collaborates with you to define the project goals, target audience, and specific requirements to ensure a perfect alignment.",
     icon: <Search className="w-8 h-8" />,
   },
   {
-    title: "Authentic Content Writing",
+    title: "Written Agreement & Milestone Payment",
     description:
-      "Ebilify takes immense pride in offering authentic content writing services with our team of experienced ghostwriters.",
-    icon: <PenTool className="w-8 h-8" />,
-  },
-  {
-    title: "Evaluative Review & Editing",
-    description:
-      "We understand the power of captivating content. That's why we pay meticulous attention to the smallest details during proofreading.",
+      "Transparency is our priority. We formalize our partnership with a clear contract and a structured milestone payment plan, ensuring security and commitment for both parties.",
     icon: <CheckCircle className="w-8 h-8" />,
   },
   {
-    title: "Impeccable Presentation",
+    title: "Outline Approval",
     description:
-      "Typesetting is an art, and our experienced typesetters possess the expertise to create a seamless and professional reading experience.",
+      "Before the heavy lifting begins, we craft a detailed roadmap of your content. You review and approve the structure to ensure the narrative flow meets your expectations.",
     icon: <Layout className="w-8 h-8" />,
   },
   {
-    title: "Complete Publishing Solutions",
+    title: "Draft Delivery",
     description:
-      "We provide a holistic approach to publishing, branding, and promotions, guiding you through the entire journey to success.",
+      "Our expert writers bring your ideas to life. We deliver a high-quality initial draft that maintains your unique voice while adhering to the highest standards of professional writing.",
+    icon: <PenTool className="w-8 h-8" />,
+  },
+  {
+    title: "Revision Phase",
+    description:
+      "Your feedback is vital. We offer a dedicated revision cycle to fine-tune the nuances, polish the prose, and ensure every detail resonates perfectly with your vision.",
+    icon: <RefreshCw className="w-8 h-8" />, // Suggested changing 'Send' to 'RefreshCw' for revisions
+  },
+  {
+    title: "Final Approval & File Handover",
+    description:
+      "Once you are 100% satisfied, we perform a final quality check and hand over the polished, ready-to-publish files in your preferred formats.",
     icon: <Send className="w-8 h-8" />,
   },
 ];
@@ -74,6 +83,9 @@ const HomeScreen = () => {
         </section>
         <section>
           <PricingSection />
+        </section>
+        <section>
+          <RefundPolicy/>
         </section>
         <section id="contact-us">
           <ContactForm />

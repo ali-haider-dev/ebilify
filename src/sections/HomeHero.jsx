@@ -4,6 +4,7 @@ import { WavyBackground } from "../components/ui/wavy-background";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 export default function HomeHero() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -26,14 +27,12 @@ export default function HomeHero() {
       className="max-w-4xl mx-auto  px-4 lg:px-0 pt-30"
     >
       <p className="text-2xl md:text-4xl lg:text-7xl text-black dark:text-white font-bold inter-var text-center">
-        Transform Your Ideas into Captivating Books
+        Professional Ghostwriting & Publishing Services
       </p>
       <p className="text-sm md:text-lg mt-4  text-black dark:text-white font-normal inter-var text-center">
-        Unlock the power of our exceptional ghostwriting services, designed to
-        turn your raw concepts into fully-fledged and captivating books ready
-        for publication. We offer a seamless pathway for you to achieve your
-        authorial aspirations without the need to devote precious time and
-        effort to writing.
+        Ebilify LLC provides structured ghostwriting, editing, and publishing
+        support services for authors and entrepreneurs. All projects are
+        delivered under written agreement with defined timelines and milestones.
       </p>
 
       <motion.div
@@ -47,8 +46,11 @@ export default function HomeHero() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="px-12 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
-        >
+         
+       >
+        <Link href={"/#contact-us"} className="flex gap-4 justify-center items-center">
           Get Started <ArrowRight size={20} />
+        </Link>
         </motion.button>
         <motion.button
           whileHover={{ scale: 1.05 }}
