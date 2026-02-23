@@ -1,11 +1,27 @@
 "use client";
 
-import React from "react";
+import React, { useActionState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { toast } from "sonner";
+import { sendEmail } from "../app/actions";
 
 const ContactForm = () => {
+  const [state, formAction, isPending] = useActionState(sendEmail, null);
+
+  useEffect(() => {
+    if (state?.success) {
+      toast.success(state.message);
+      // Reset form logic is handled if needed, or by browser on success if not controlled
+    } else if (state?.error) {
+      toast.error(state.error);
+    }
+  }, [state]);
+
   return (
-    <section className="py-24 px-6 bg-white dark:bg-slate-950 transition-colors duration-300">
+    <section
+      id="contact"
+      className="py-24 px-6 bg-white dark:bg-slate-950 transition-colors duration-300"
+    >
       <div className="container mx-auto max-w-4xl">
         {/* Header */}
         <div className="text-center mb-12">
@@ -26,7 +42,7 @@ const ContactForm = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="space-y-6"
-          onSubmit={(e) => e.preventDefault()}
+          action={formAction}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex flex-col gap-2">
@@ -35,6 +51,7 @@ const ContactForm = () => {
               </label>
               <input
                 type="text"
+                name="firstName"
                 className="w-full px-5 py-3 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:border-indigo-600 dark:focus:border-indigo-400 outline-none transition-all dark:text-white"
               />
             </div>
@@ -44,6 +61,7 @@ const ContactForm = () => {
               </label>
               <input
                 type="text"
+                name="lastName"
                 className="w-full px-5 py-3 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:border-indigo-600 dark:focus:border-indigo-400 outline-none transition-all dark:text-white"
               />
             </div>
@@ -56,6 +74,7 @@ const ContactForm = () => {
               </label>
               <input
                 type="tel"
+                name="phone"
                 className="w-full px-5 py-3 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:border-indigo-600 dark:focus:border-indigo-400 outline-none transition-all dark:text-white"
               />
             </div>
@@ -65,6 +84,7 @@ const ContactForm = () => {
               </label>
               <input
                 type="email"
+                name="email"
                 className="w-full px-5 py-3 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:border-indigo-600 dark:focus:border-indigo-400 outline-none transition-all dark:text-white"
               />
             </div>
@@ -76,6 +96,7 @@ const ContactForm = () => {
             </label>
             <input
               type="text"
+              name="subject"
               className="w-full px-5 py-3 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:border-indigo-600 dark:focus:border-indigo-400 outline-none transition-all dark:text-white"
             />
           </div>
@@ -86,6 +107,7 @@ const ContactForm = () => {
               Message
             </label>
             <textarea
+              name="message"
               rows={5}
               placeholder="Tell us about your project..."
               className="w-full px-5 py-3 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:border-indigo-600 dark:focus:border-indigo-400 outline-none transition-all dark:text-white resize-none"
@@ -94,10 +116,12 @@ const ContactForm = () => {
 
           <div className="pt-4 md:flex md:justify-center">
             <motion.button
+              type="submit"
+              disabled={isPending}
               initial="initial"
               whileHover="hover"
               whileTap={{ scale: 0.98 }}
-              className="group relative w-full md:w-max px-28 py-4 overflow-hidden rounded-full border-2 border-indigo-600 dark:border-indigo-400 font-bold transition-all duration-300 bg-white dark:bg-indigo-600"
+              className="group relative w-full md:w-max px-28 py-4 overflow-hidden rounded-full border-2 border-indigo-600 dark:border-indigo-400 font-bold transition-all duration-300 bg-white dark:bg-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <motion.span
                 variants={{
@@ -112,7 +136,7 @@ const ContactForm = () => {
                 text-indigo-600 dark:text-white 
                 group-hover:text-white dark:group-hover:text-indigo-600"
               >
-                Send Message
+                {isPending ? "Sending..." : "Send Message"}
               </span>
             </motion.button>
           </div>

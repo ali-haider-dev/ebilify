@@ -9,8 +9,7 @@ const RecentProjects = lazy(() => import("@/src/components/RecentProjects"));
 const WritingServices = lazy(() => import("@/src/sections/WritingServices"));
 const ContactForm = lazy(() => import("@/src/sections/ContactForm"));
 import { Search, PenTool, CheckCircle, Layout, Send } from "lucide-react";
-import PricingSection from "@/src/components/PriceSection";
-
+const PricingSection = lazy(() => import("@/src/components/PriceSection"));
 const processes = [
   {
     title: "Research and Expert Outlining",
