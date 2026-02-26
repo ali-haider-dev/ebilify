@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import StickyActions from "../components/StickyActions";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +44,7 @@ export default function RootLayout({
             <Footer />
             <StickyActions />
           </div>
+          <Toaster position="top-right" richColors />
         </ThemeProvider>
       </body>
     </html>
